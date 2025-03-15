@@ -1,0 +1,86 @@
+// Import Bootstrap's required functions and variables
+@import "variables";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: "Mulish";
+  src: url("@/assets/fonts/Mulish-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("@/assets/fonts/Mulish-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("@/assets/fonts/Mulish-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("@/assets/fonts/Mulish-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond", serif;
+  src: url("@/assets/fonts/CormorantGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Urbanist", sans-serif;
+  src: url("@/assets/fonts/Urnanist-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  p {
+    font-family: "Mulish", sans-serif;
+  }
+
+  h1 {
+    letter-spacing: 1rem;
+  }
+  h2 {
+    font-family: "Cormorant Garamond";
+  }
+}
+
+.text-heading-darker {
+  font-family: "Urbanist", sans-serif;
+  color: $va-second;
+}
+
+.text-heading-dark {
+  font-family: "Coromrant Garamond";
+  font-weight: 400;
+  color: $va-prime;
+}
+
+.text-body-light {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  color: $va-text-light;
+}
+
+.text-body-dark {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  color: $va-text-dark;
+}
