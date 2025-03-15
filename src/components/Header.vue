@@ -1,0 +1,192 @@
+<script setup></script>
+
+<template>
+  <div class="bg-head-container">
+    <div class="container d-flex h-100">
+      <div class="p-3 w-50">
+        <figure>
+          <img class="logo rounded" src="/imgs/logo.jpg" alt="logo" />
+        </figure>
+      </div>
+      <div
+        class="d-flex flex-column p-3 w-50 justify-content-between align-items-end"
+      >
+        <div class="hamburger-menu">
+          <input
+            type="checkbox"
+            id="checkbox3"
+            class="checkbox3 visuallyHidden"
+          />
+          <label for="checkbox3">
+            <div class="hamburger hamburger3">
+              <span class="bar bar1"></span>
+              <span class="bar bar2"></span>
+              <span class="bar bar3"></span>
+              <span class="bar bar4"></span>
+            </div>
+          </label>
+        </div>
+        <div
+          class="whapp rounded-circle d-flex flex-column align-items-center justify-content-center position-relative p-3"
+        >
+          <div class="position-absolute svg-txt">
+            <svg width="80" height="80" viewBox="35 35 95 1">
+              <!-- Define circular path -->
+              <defs>
+                <path
+                  id="circlePath"
+                  d="M 90, 55 m -40, 0 a 36,40 0 1,1 65,0 a 30,30 0 1,1 -75,0"
+                />
+              </defs>
+
+              <!-- Place text along the circular path -->
+              <text fill="#fff" font-size="18">
+                <textPath
+                  href="#circlePath"
+                  startOffset="30%"
+                  text-anchor="middle"
+                >
+                  Prenota ora
+                </textPath>
+              </text>
+            </svg>
+          </div>
+
+          <div class="fth">
+            <svg
+              id="whatsapp-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<style scoped lang="scss">
+@import "/src/assets/styles/variables";
+.bg-head-container {
+  height: 85vh;
+  background: url("/imgs/bg-img-1.jpg") no-repeat center;
+  background-size: cover;
+  .logo {
+    width: 6rem;
+  }
+  .hamburger-menu {
+    width: 3rem;
+    height: 3rem;
+
+    .visuallyHidden {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+    }
+
+    .hamburger {
+      margin: 0 auto;
+      margin-top: 30px;
+      width: 30px;
+      height: 30px;
+      position: relative;
+    }
+
+    .hamburger .bar {
+      padding: 0;
+      width: 30px;
+      height: 4px;
+      background-color: $va-text-light;
+      display: block;
+      border-radius: 4px;
+      transition: all 0.4s ease-in-out;
+      position: absolute;
+    }
+
+    .bar1 {
+      top: 0;
+    }
+
+    .bar2,
+    .bar3 {
+      top: 13.5px;
+    }
+
+    .bar3 {
+      right: 0;
+    }
+
+    .bar4 {
+      bottom: 0;
+    }
+
+    /* HAMBURGER 3 */
+
+    .hamburger3 .bar1 {
+      transform-origin: 5%;
+    }
+
+    .hamburger3 .bar4 {
+      transform-origin: 5%;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar1 {
+      transform: rotate(45deg);
+      height: 3px;
+      width: 42px;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar3 {
+      transform: rotate(45deg);
+      height: 3px;
+      background-color: transparent;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar2 {
+      transform: rotate(-45deg);
+      height: 3px;
+      background-color: transparent;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar4 {
+      transform: rotate(-45deg);
+      height: 3px;
+      width: 42px;
+    }
+  }
+
+  .whapp {
+    background-color: #00000053;
+    width: 5rem;
+    height: 5rem;
+
+    #whatsapp-icon {
+      fill: $va-text-light;
+      width: 100%;
+    }
+    .fth {
+      width: 2.5rem;
+      //   top: 23%;
+      //   right: 50%;
+      //   transform: translate(50%);
+    }
+    .svg-txt {
+      margin-top: 0.8rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .logo {
+      width: 200px;
+    }
+  }
+}
+</style>
