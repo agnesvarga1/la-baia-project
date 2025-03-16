@@ -38,6 +38,7 @@
 </template>
 <style scoped lang="scss">
 @import "/src/assets/styles/variables";
+
 .whapp {
   background-color: #00000053;
   width: 5rem;

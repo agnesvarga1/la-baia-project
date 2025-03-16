@@ -1,10 +1,27 @@
 <script setup>
-import Hamburger from "./Hamburger.vue";
+import { ref } from "vue";
 import WhatsappBtn from "./WhatsappBtn.vue";
+import NavbarSM from "./NavbarSM.vue";
+import Hamburger from "./Hamburger.vue";
+const isNavOpen = ref(false);
+const toggleNavbar = () => {
+  console.log("toggeled");
+  isNavOpen.value = !isNavOpen.value;
+};
 </script>
 
 <template>
   <header class="bg-head-container">
+    <Hamburger
+      class="position-absolute z-3 top-0 end-0 d-lg-none"
+      :isOpen="isNavOpen"
+    ></Hamburger>
+
+    <NavbarSM
+      v-if="isNavOpen"
+      class="position-absolute z-2 top-0 start-0 end-0"
+    ></NavbarSM>
+
     <div class="container d-flex h-100">
       <div class="p-3 w-50">
         <figure>
@@ -12,9 +29,8 @@ import WhatsappBtn from "./WhatsappBtn.vue";
         </figure>
       </div>
       <div
-        class="d-flex flex-column p-3 w-50 justify-content-between align-items-end"
+        class="d-flex flex-column p-3 w-50 justify-content-end align-items-end"
       >
-        <Hamburger></Hamburger>
         <WhatsappBtn></WhatsappBtn>
       </div>
     </div>
@@ -41,9 +57,6 @@ import WhatsappBtn from "./WhatsappBtn.vue";
     }
     .fth {
       width: 2.5rem;
-      //   top: 23%;
-      //   right: 50%;
-      //   transform: translate(50%);
     }
     .svg-txt {
       margin-top: 0.8rem;

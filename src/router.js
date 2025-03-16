@@ -6,10 +6,13 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
+      // path: '/:lang/home',
       path: "/",
+      props: true,
       name: "home",
       component: AppHome,
     },
+    // { path: "/:lang(.*)*", redirect: "/it/home" },
   ],
 });
 export { router };
