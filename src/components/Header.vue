@@ -35,6 +35,8 @@ const toggleNavbar = () => {
       </div>
     </div>
   </header>
+  <h1 class="p-2">Test Title</h1>
+  <h2 class="p-2">Test Subtitle</h2>
 </template>
 <style scoped lang="scss">
 @import "/src/assets/styles/variables";

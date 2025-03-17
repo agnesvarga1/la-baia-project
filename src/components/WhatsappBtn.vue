@@ -57,8 +57,10 @@
   .svg-txt {
     margin-top: 0.8rem;
   }
-  text {
+  svg textPath {
+    font-family: "Mulish", sans-serif;
     letter-spacing: 0.2rem;
+    font-weight: 300;
   }
 }
 </style>
