@@ -15,7 +15,7 @@
         </defs>
 
         <!-- Place text along the circular path -->
-        <text fill="#fff" font-size="18">
+        <text fill="#fff" font-size="15">
           <textPath href="#circlePath" startOffset="30%" text-anchor="middle">
             Prenota ora
           </textPath>
