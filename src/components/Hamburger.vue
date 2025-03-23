@@ -8,7 +8,7 @@ const emit = defineEmits(["toggle"]);
 
 <template>
   <div class="hamburger-menu" @click="emit('toggle')">
-    <div class="hamburger hamburger3" :class="{ open: isOpen }">
+    <div class="hamburger hamburger3 me-5" :class="{ open: isOpen }">
       <span class="bar bar1"></span>
       <span class="bar bar2"></span>
       <span class="bar bar3"></span>
@@ -25,7 +25,7 @@ const emit = defineEmits(["toggle"]);
 
   .hamburger {
     margin: 0 auto;
-    margin-top: 30px;
+
     width: 30px;
     height: 30px;
     position: relative;

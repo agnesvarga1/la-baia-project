@@ -2,27 +2,50 @@
 
 <template>
   <div
-    class="whapp rounded-circle d-flex flex-column align-items-center justify-content-center position-relative p-3"
+    class="whapp rounded-circle d-flex flex-column align-items-center justify-content-center position-relative"
   >
     <div class="position-absolute svg-txt">
-      <svg width="80" height="80" viewBox="35 35 95 1">
+      <svg width="95" height="95" viewBox="32 35 105 25" class="d-lg-none">
         <!-- Define circular path -->
         <defs>
           <path
             id="circlePath"
-            d="M 90, 55 m -40, 0 a 36,40 0 1,1 65,0 a 30,30 0 1,1 -75,0"
+            d="M 90, 55 m -40, 0 a 36,40 0 1,1 70,0 a 30,30 0 1,1 -75,0"
           />
         </defs>
 
         <!-- Place text along the circular path -->
-        <text fill="#fff" font-size="15">
+        <text fill="#fefefe" font-size="18">
+          <textPath href="#circlePath" startOffset="28%" text-anchor="middle">
+            Prenota ora
+          </textPath>
+        </text>
+      </svg>
+
+      <!----------------------------------------------------------------------------------------------------->
+      <!-- ---------------SVG FOR LG------------------------------------------------------------------------>
+      <svg
+        width="85"
+        height="85"
+        viewBox="35 30 105 30"
+        class="d-none d-lg-block"
+      >
+        <defs>
+          <path
+            id="circlePath"
+            d="M 90, 60 m -40, 0 a 35,35 0 1,1 70,0 a 30,30 0 1,1 -80,0"
+          />
+        </defs>
+
+        <!-- Place text along the circular path -->
+        <text fill="#fefefe" font-size="15">
           <textPath href="#circlePath" startOffset="30%" text-anchor="middle">
             Prenota ora
           </textPath>
         </text>
       </svg>
     </div>
-
+    <!--------------------------------------------------------------------------------------------------------------- -->
     <div class="fth">
       <svg
         id="whatsapp-icon"
@@ -41,18 +64,14 @@
 
 .whapp {
   background-color: #00000053;
-  width: 5rem;
-  height: 5rem;
+  width: 5.8rem;
+  height: 5.8rem;
 
   #whatsapp-icon {
     fill: $va-text-light;
-    width: 100%;
   }
   .fth {
-    width: 2.5rem;
-    //   top: 23%;
-    //   right: 50%;
-    //   transform: translate(50%);
+    width: 3.2rem;
   }
   .svg-txt {
     margin-top: 0.8rem;
@@ -61,6 +80,28 @@
     font-family: "Mulish", sans-serif;
     letter-spacing: 0.2rem;
     font-weight: 300;
+  }
+}
+
+/************************************   LG SCREEN   *********************************** */
+
+@media (min-width: 992px) {
+  .whapp {
+    width: 10rem !important;
+    height: 10rem !important;
+
+    .fth {
+      width: 5rem;
+    }
+
+    .svg-txt svg {
+      width: 150px; // Increased from 85
+      height: 150px; // Increased from 85
+    }
+
+    text {
+      font-size: 1.2rem;
+    }
   }
 }
 </style>
