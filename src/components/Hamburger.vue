@@ -20,12 +20,12 @@ const emit = defineEmits(["toggle"]);
 @import "/src/assets/styles/variables";
 
 .hamburger-menu {
-  width: 3rem;
-  height: 3rem;
+  width: 64px;
+  height: 64px;
 
   .hamburger {
     margin: 0 auto;
-
+    margin-top: 20px;
     width: 30px;
     height: 30px;
     position: relative;
