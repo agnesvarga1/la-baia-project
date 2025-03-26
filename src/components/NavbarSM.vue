@@ -1,10 +1,19 @@
 <script setup>
 import { ref } from "vue";
-import { store } from "../store";
+import { useI18n } from "vue-i18n";
 import Hamburger from "./Hamburger.vue";
+
 const isNavOpen = ref(false);
+const { t, locale } = useI18n();
+
 const toggleNavbar = () => {
   isNavOpen.value = !isNavOpen.value;
+};
+
+// Function to change the language
+const switchLanguage = (lang) => {
+  locale.value = lang;
+  localStorage.setItem("lang", lang);
 };
 </script>
 
@@ -25,8 +34,39 @@ const toggleNavbar = () => {
         v-if="isNavOpen"
         class="d-flex flex-column align-items-start gap-3 position-absolute z-1 top-0 start-0 end-0 h-100 pe-3"
       >
-        <li v-for="link in store.navLinkList">
-          <a href="">{{ link }}</a>
+        <li>
+          <a href="#">{{ t("home") }}</a>
+        </li>
+        <li>
+          <a href="#about">{{ t("about") }}</a>
+        </li>
+        <li>
+          <a href="#">{{ t("menu") }}</a>
+        </li>
+        <li>
+          <a href="#">{{ t("book") }}</a>
+        </li>
+        <li>
+          <a href="#location">{{ t("location") }}</a>
+        </li>
+        <li>
+          <a href="#contact">{{ t("contact") }}</a>
+        </li>
+
+        <!-- Language Switcher -->
+        <li class="language-switcher">
+          <button
+            @click="switchLanguage('en')"
+            :class="{ active: locale === 'en' }"
+          >
+            <span class="flag fi fi-gb"></span>
+          </button>
+          <button
+            @click="switchLanguage('it')"
+            :class="{ active: locale === 'it' }"
+          >
+            <span class="flag fi fi-it"></span>
+          </button>
         </li>
       </ul>
     </transition>
@@ -55,6 +95,34 @@ nav {
   .no-bg {
     background-color: transparent;
   }
+
+  /* --------------- Flag Styling --------------- */
+  .language-switcher {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+
+    button {
+      background: none;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: $va-text-light;
+
+      .flag {
+        width: 24px;
+        height: 16px;
+      }
+
+      &.active {
+        display: none;
+      }
+    }
+  }
+
   /* ---------------  navbar sm transition*/
 
   .slide-enter-active,
