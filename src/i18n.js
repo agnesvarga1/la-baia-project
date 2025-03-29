@@ -8,6 +8,8 @@ const messages = {
     book: "Book on Whatsapp",
     location: "Location",
     contact: "Contact",
+    welcome: "Welcome to the Baia",
+    actionBtn: "Book now",
   },
   it: {
     home: "Home",
@@ -16,6 +18,8 @@ const messages = {
     book: "Prenota su Whatsapp",
     location: "Dove Siamo",
     contact: "Contatti",
+    welcome: "Benvenuti alla Baia",
+    actionBtn: "Prenota ora",
   },
 };
 // Create Vue I18n instance

@@ -2,6 +2,8 @@
 import Header from "../components/Header.vue";
 import AboutComp from "../components/AboutComp.vue";
 import WhatsappBtn from "../components/WhatsappBtn.vue";
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 </script>
 
 <template>
@@ -10,7 +12,7 @@ import WhatsappBtn from "../components/WhatsappBtn.vue";
     <div class="whatsapp-btn">
       <a class="" href=""><WhatsappBtn></WhatsappBtn></a>
     </div>
-    <h1>Benvenuti alla Baia</h1>
+    <h1>{{ t("welcome") }}</h1>
     <AboutComp></AboutComp>
   </div>
 </template>

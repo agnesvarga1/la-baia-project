@@ -89,10 +89,36 @@ ul {
     a {
       color: $va-text-light;
       font-family: "Urbanist", sans-serif;
-      font-size: 1.2rem;
-      &:hover {
-        border-bottom: 1px solid $va-text-light;
-      }
+
+      display: inline-block;
+      padding: 5px 10px;
+      position: relative;
+      font-size: 1.3rem;
+    }
+    a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+    a:hover:after {
+      width: 100%;
+      left: 0;
+    }
+    .selected {
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: #fff;
     }
   }
 }

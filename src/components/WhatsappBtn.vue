@@ -1,5 +1,7 @@
 <script setup>
 import { store } from "../store";
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 </script>
 
 <template>
@@ -20,7 +22,7 @@ import { store } from "../store";
           <!-- Place text along the circular path -->
           <text fill="#fefefe" font-size="18">
             <textPath href="#circlePath" startOffset="28%" text-anchor="middle">
-              Prenota ora
+              {{ t("actionBtn") }}
             </textPath>
           </text>
         </svg>
@@ -43,7 +45,7 @@ import { store } from "../store";
           <!-- Place text along the circular path -->
           <text fill="#fefefe" font-size="15">
             <textPath href="#circlePath" startOffset="30%" text-anchor="middle">
-              Prenota ora
+              {{ t("actionBtn") }}
             </textPath>
           </text>
         </svg>
