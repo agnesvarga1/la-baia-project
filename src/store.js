@@ -1,12 +1,5 @@
-import { reactive, ref } from "vue";
+import { reactive } from "vue";
 export const store = reactive({
-  navLinkList: [
-    "Home",
-    "Chi Siamo",
-    "Menu",
-    "Prenota ora",
-    "Location",
-    "Contatti",
-  ],
-  whatsappUrl: "",
+  cell: "393519983501",
+  whatsappUrl: "https://wa.me/393519983501",
 });

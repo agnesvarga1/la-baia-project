@@ -18,12 +18,10 @@ const messages = {
     contact: "Contatti",
   },
 };
-
-const i18n = createI18n({
+// Create Vue I18n instance
+export const i18n = createI18n({
   legacy: false, // Needed for Vue 3 Composition API
-  locale: "it", // Default language
-  fallbackLocale: "it", // Fallback language
+  locale: localStorage.getItem("lang") || "it", // Default language
+  fallbackLocale: "it",
   messages,
 });
-
-export default i18n;
