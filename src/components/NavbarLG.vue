@@ -1,4 +1,5 @@
 <script setup>
+import { store } from "../store";
 import { useNavbarStore } from "../stores/useNavbarStore";
 import { useI18n } from "vue-i18n";
 import { RouterLink } from "vue-router";

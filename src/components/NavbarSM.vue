@@ -1,4 +1,5 @@
 <script setup>
+import { store } from "../store";
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useNavbarStore } from "../stores/useNavbarStore";
