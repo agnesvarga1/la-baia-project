@@ -3,6 +3,7 @@ import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useNavbarStore } from "../stores/useNavbarStore";
 import Hamburger from "./Hamburger.vue";
+import { RouterLink } from "vue-router";
 
 const isNavOpen = ref(false);
 const { t } = useI18n();
@@ -22,9 +23,12 @@ const closeNavbar = () => {
     :class="{ 'scrolled-navbar': navbarStore.isScrolled, open: isNavOpen }"
     class="d-flex justify-content-between align-items-start position-fixed start-0 end-0 px-3 pt-2"
   >
-    <figure class="">
-      <img class="logo rounded" src="/imgs/logo.jpg" alt="logo" />
-    </figure>
+    <router-link :to="{ name: 'home' }">
+      <figure class="">
+        <img class="logo rounded" src="/imgs/logo.jpg" alt="logo" />
+      </figure>
+    </router-link>
+
     <Hamburger
       class="d-lg-none postion-absolute top-0 end-0 z-3"
       :isOpen="isNavOpen"

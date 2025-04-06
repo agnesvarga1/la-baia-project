@@ -2,18 +2,22 @@
 import Header from "../components/Header.vue";
 import AboutComp from "../components/AboutComp.vue";
 import WhatsappBtn from "../components/WhatsappBtn.vue";
+import CTAMenu from "../components/CTAMenu.vue";
+import LocationComp from "../components/LocationComp.vue";
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 </script>
 
 <template>
   <Header></Header>
-  <div class="container">
+  <div class="container p-0">
     <div class="whatsapp-btn">
       <a class="" href=""><WhatsappBtn></WhatsappBtn></a>
     </div>
-    <h1>{{ t("welcome") }}</h1>
+    <h1 class="text-center">{{ t("welcome") }}</h1>
     <AboutComp></AboutComp>
+    <CTAMenu></CTAMenu>
+    <LocationComp></LocationComp>
   </div>
 </template>
 <style scoped lang="scss">

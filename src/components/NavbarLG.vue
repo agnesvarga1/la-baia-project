@@ -1,6 +1,7 @@
 <script setup>
 import { useNavbarStore } from "../stores/useNavbarStore";
 import { useI18n } from "vue-i18n";
+import { RouterLink } from "vue-router";
 const { t } = useI18n();
 const navbarStore = useNavbarStore();
 </script>
@@ -10,12 +11,14 @@ const navbarStore = useNavbarStore();
     class="d-none d-lg-block full-width-navbar"
   >
     <div class="navbar-content container">
-      <figure class="mb-0">
-        <img class="logo rounded" src="/imgs/logo.jpg" alt="logo" />
-      </figure>
+      <router-link :to="{ name: 'home' }">
+        <figure class="mb-0">
+          <img class="logo rounded" src="/imgs/logo.jpg" alt="logo" />
+        </figure>
+      </router-link>
       <ul class="d-flex align-items-center gap-4 mb-0">
         <li>
-          <a href="#">{{ t("home") }}</a>
+          <router-link :to="{ name: 'home' }">{{ t("home") }}</router-link>
         </li>
         <li>
           <a href="#about">{{ t("about") }}</a>

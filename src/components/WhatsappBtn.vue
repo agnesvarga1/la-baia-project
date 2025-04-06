@@ -45,7 +45,7 @@ const { t } = useI18n();
           <!-- Place text along the circular path -->
           <text fill="#fefefe" font-size="15">
             <textPath href="#circlePath" startOffset="30%" text-anchor="middle">
-              {{ t("actionBtn") }}
+              Prenota ora
             </textPath>
           </text>
         </svg>

@@ -10,6 +10,7 @@ const messages = {
     contact: "Contact",
     welcome: "Welcome to the Baia",
     actionBtn: "Book now",
+    perMenu: "Read Our Menu",
   },
   it: {
     home: "Home",
@@ -20,6 +21,7 @@ const messages = {
     contact: "Contatti",
     welcome: "Benvenuti alla Baia",
     actionBtn: "Prenota ora",
+    perMenu: "Leggi Nostro Menu",
   },
 };
 // Create Vue I18n instance
