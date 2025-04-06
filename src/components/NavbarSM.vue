@@ -40,16 +40,16 @@ const closeNavbar = () => {
         class="d-flex flex-column align-items-start gap-3 position-absolute z-1 top-0 start-0 end-0 h-100 pe-3"
       >
         <li @click="closeNavbar">
-          <a href="#">{{ t("home") }}</a>
+          <router-link :to="{ name: 'home' }">{{ t("home") }}</router-link>
         </li>
         <li @click="closeNavbar">
           <a href="#about">{{ t("about") }}</a>
         </li>
         <li @click="closeNavbar">
-          <a href="#">{{ t("menu") }}</a>
+          <router-link :to="{ name: 'menu' }"> {{ t("menu") }}</router-link>
         </li>
         <li @click="closeNavbar">
-          <a href="#">{{ t("book") }}</a>
+          <a :href="store.whatsappUrl" target="blank">{{ t("book") }}</a>
         </li>
         <li @click="closeNavbar">
           <a href="#location">{{ t("location") }}</a>

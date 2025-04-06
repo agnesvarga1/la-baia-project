@@ -24,10 +24,10 @@ const navbarStore = useNavbarStore();
           <a href="#about">{{ t("about") }}</a>
         </li>
         <li>
-          <a href="#">{{ t("menu") }}</a>
+          <router-link :to="{ name: 'menu' }"> {{ t("menu") }}</router-link>
         </li>
         <li>
-          <a href="#">{{ t("book") }}</a>
+          <a :href="store.whatsappUrl" target="blank">{{ t("book") }}</a>
         </li>
         <li>
           <a href="#location">{{ t("location") }}</a>

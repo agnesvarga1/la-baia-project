@@ -4,9 +4,9 @@ const { t } = useI18n();
 </script>
 <template>
   <section id="about" class="pt-3 d-md-flex">
-    <div class="text-about px-2 px-md-0">
+    <div class="text-about px-2 ps-md-2">
       <h2>{{ t("about") }}</h2>
-      <p class="body-dark pt-3 pe-md-3">
+      <p class="body-dark pt-2 pe-md-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -39,7 +39,25 @@ p {
 img {
   width: 100%;
 }
+
 @media (min-width: 768px) {
+  // .text-about {
+  //   //width: 50%;
+  //   //  border: 2px solid red;
+  // }
+  figure {
+    height: 290px; /* or set a specific height like 300px */
+    display: flex;
+    // border: 2px solid blue;
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (min-width: 992px) {
   .text-about {
     width: calc(100% / 1.1);
   }

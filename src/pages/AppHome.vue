@@ -10,11 +10,11 @@ const { t } = useI18n();
 
 <template>
   <Header></Header>
-  <div class="container p-0">
+  <div class="container-lg p-0 mx-md-0 mx-lg-auto">
     <div class="whatsapp-btn">
       <a class="" href=""><WhatsappBtn></WhatsappBtn></a>
     </div>
-    <h1 class="text-center">{{ t("welcome") }}</h1>
+    <h1 class="text-center mt-2">{{ t("welcome") }}</h1>
     <AboutComp></AboutComp>
     <CTAMenu></CTAMenu>
     <LocationComp></LocationComp>
@@ -22,7 +22,8 @@ const { t } = useI18n();
 </template>
 <style scoped lang="scss">
 @import "/src/assets/styles/variables";
-.container {
+.container,
+.container-lg {
   position: relative;
   .whatsapp-btn {
     position: fixed;
