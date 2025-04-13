@@ -13,9 +13,29 @@ import NavbarLG from "./NavbarLG.vue";
 </template>
 <style scoped lang="scss">
 @import "/src/assets/styles/variables";
+
 .bg-head-container {
-  height: 95vh;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.bg-head-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: url("/imgs/dinning_room.jpg") no-repeat right;
   background-size: cover;
+  opacity: 0;
+  animation: fadeInBg 2s ease-in-out forwards;
+  z-index: -1; /* keep it behind the content */
+}
+
+@keyframes fadeInBg {
+  to {
+    opacity: 1;
+  }
 }
 </style>

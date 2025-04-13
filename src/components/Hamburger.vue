@@ -13,7 +13,7 @@ const emit = defineEmits(["toggle"]);
   <div
     class="hamburger-menu"
     @click="emit('toggle')"
-    :class="{ 'scrolled-navbar': !navbarStore.isScrolled }"
+    :class="{ 'scrolled-navbar': !navbarStore.isScrolled && !isOpen }"
   >
     <div class="hamburger hamburger3" :class="{ open: isOpen }">
       <span class="bar bar1"></span>

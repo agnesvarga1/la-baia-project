@@ -28,10 +28,11 @@ h1 {
   color: $dark-text;
 }
 p {
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
   color: $dark-text;
 }
+
 img {
   width: 100%;
 }
@@ -42,7 +43,7 @@ img {
   //   //  border: 2px solid red;
   // }
   figure {
-    height: 290px; /* or set a specific height like 300px */
+    height: 400px; /* or set a specific height like 300px */
     display: flex;
     // border: 2px solid blue;
     img {
@@ -53,9 +54,9 @@ img {
   }
 }
 
-@media (min-width: 992px) {
-  .text-about {
-    width: calc(100% / 1.1);
-  }
-}
+// @media (min-width: 992px) {
+//   .text-about {
+//     width: calc(100% / 1.1);
+//   }
+// }
 </style>

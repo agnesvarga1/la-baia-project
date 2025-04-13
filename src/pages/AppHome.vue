@@ -1,20 +1,38 @@
 <script setup>
+import { useNavbarStore } from "../stores/useNavbarStore";
 import Header from "../components/Header.vue";
 import AboutComp from "../components/AboutComp.vue";
 import WhatsappBtn from "../components/WhatsappBtn.vue";
 import CTAMenu from "../components/CTAMenu.vue";
 import LocationComp from "../components/LocationComp.vue";
 import { useI18n } from "vue-i18n";
+import { onMounted, ref } from "vue";
 const { t } = useI18n();
+const navbarStore = useNavbarStore();
+
+const showH1 = ref(false);
+onMounted(() => {
+  setTimeout(() => {
+    showH1.value = true;
+  }, 100); // small delay helps with smooth entry
+});
 </script>
 
 <template>
   <Header></Header>
   <div class="container-lg p-0 mx-md-0 mx-lg-auto">
-    <div class="whatsapp-btn">
-      <a class="" href=""><WhatsappBtn></WhatsappBtn></a>
+    <div
+      :class="['whatsapp-btn', { 'scrolled-position': navbarStore.isScrolled }]"
+    >
+      <WhatsappBtn
+        :class="{ 'scrolled-position': navbarStore.isScrolled }"
+      ></WhatsappBtn>
     </div>
-    <h1 class="text-center mt-2">{{ t("welcome") }}</h1>
+    <transition name="slide">
+      <h1 v-if="showH1" class="text-center py-2">
+        {{ t("welcome") }}
+      </h1></transition
+    >
     <AboutComp></AboutComp>
     <CTAMenu></CTAMenu>
     <LocationComp></LocationComp>
@@ -22,14 +40,19 @@ const { t } = useI18n();
 </template>
 <style scoped lang="scss">
 @import "/src/assets/styles/variables";
+h1 {
+  font-size: 2rem;
+}
 .container,
 .container-lg {
   position: relative;
   .whatsapp-btn {
     position: fixed;
-    bottom: 1rem;
+    bottom: 4.5rem;
     right: 1rem;
-
+    &.scrolled-position {
+      bottom: 1rem;
+    }
     @media (min-width: 576px) {
       right: calc((100vw - 540px) / 2);
     }
@@ -49,11 +72,30 @@ const { t } = useI18n();
     @media (min-width: 1400px) {
       right: calc((100vw - 1320px) / 2);
     }
+    .scrolled-position {
+      bottom: 1rem;
+    }
   }
 }
 h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 3.5rem;
   color: $second;
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.slide-enter-active {
+  transition: transform 2s ease, opacity 2s ease;
+}
+.slide-enter-from {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.slide-enter-to {
+  transform: translateX(0);
+  opacity: 1;
 }
 </style>
