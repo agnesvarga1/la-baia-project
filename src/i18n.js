@@ -7,7 +7,7 @@ const messages = {
     menu: "Our Menu",
     book: "Book on Whatsapp",
     location: "Location",
-    contact: "Contact",
+    contact: "Contacts",
     welcome: "Welcome to the Baia",
     actionBtn: "Book now",
     perMenu: "Read Our Menu",

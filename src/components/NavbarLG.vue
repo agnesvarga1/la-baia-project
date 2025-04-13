@@ -11,7 +11,7 @@ const navbarStore = useNavbarStore();
     :class="{ 'scrolled-navbar': navbarStore.isScrolled }"
     class="d-none d-lg-block full-width-navbar"
   >
-    <div class="navbar-content container">
+    <div class="navbar-content container-fluid">
       <router-link :to="{ name: 'home' }">
         <figure class="mb-0">
           <img class="logo rounded" src="/imgs/logo.jpg" alt="logo" />
@@ -70,7 +70,7 @@ nav.full-width-navbar {
 
   &.scrolled-navbar {
     // Dark transparent background when scrolled
-    background-color: #00000053; // Slightly darker when scrolled
+    background-color: $prime-transparent; // Slightly darker when scrolled
   }
 }
 
@@ -88,10 +88,10 @@ nav.full-width-navbar {
 
 ul {
   li {
-    color: $va-text-light;
+    color: $dark-text;
 
     a {
-      color: $va-text-light;
+      color: $dark-text;
       font-family: "Urbanist", sans-serif;
 
       display: inline-block;
@@ -107,7 +107,7 @@ ul {
       height: 2px;
       left: 50%;
       position: absolute;
-      background: #fff;
+      background: $dark-text;
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
     }
@@ -122,7 +122,7 @@ ul {
       height: 2px;
       left: 50%;
       position: absolute;
-      background: #fff;
+      background: $dark-text;
     }
   }
 }
@@ -136,7 +136,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 5px;
-    color: $va-text-light;
+    //color: $va-text-light;
 
     .flag {
       width: 24px;

@@ -53,35 +53,27 @@ body {
   p {
     font-family: "Mulish", sans-serif;
   }
-
-  h1 {
-    font-family: "Urbanist", sans-serif;
-    letter-spacing: 0.5rem;
-  }
-  h2 {
-    font-family: "Urbanist", sans-serif;
-  }
 }
 
 .text-heading-darker {
   font-family: "Urbanist", sans-serif;
-  color: $va-second;
+  color: $second;
 }
 
 .text-heading-dark {
   font-family: "Coromrant Garamond";
   font-weight: 400;
-  color: $va-prime;
+  color: $prime;
 }
 
 .text-va-light {
   font-family: "Mulish", sans-serif;
-  color: $va-text-light;
+  color: $light-text;
 }
 
 .body-dark {
   font-weight: 400;
-  color: $va-text-dark;
+  color: $dark-text;
 }
 
 ul {

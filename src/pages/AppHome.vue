@@ -54,6 +54,6 @@ const { t } = useI18n();
 h1 {
   font-family: "Cormorant Garamond", serif;
   font-size: 3.5rem;
-  color: $va-second;
+  color: $second;
 }
 </style>

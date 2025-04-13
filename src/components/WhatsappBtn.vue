@@ -20,7 +20,7 @@ const { t } = useI18n();
           </defs>
 
           <!-- Place text along the circular path -->
-          <text fill="#fefefe" font-size="18">
+          <text fill="#52331F" font-size="18">
             <textPath href="#circlePath" startOffset="28%" text-anchor="middle">
               {{ t("actionBtn") }}
             </textPath>
@@ -43,7 +43,7 @@ const { t } = useI18n();
           </defs>
 
           <!-- Place text along the circular path -->
-          <text fill="#fefefe" font-size="15">
+          <text fill="" font-size="15">
             <textPath href="#circlePath" startOffset="30%" text-anchor="middle">
               Prenota ora
             </textPath>
@@ -69,12 +69,12 @@ const { t } = useI18n();
 @import "/src/assets/styles/variables";
 
 .whapp {
-  background-color: #00000053;
+  background-color: $prime-transparent;
   width: 5.8rem;
   height: 5.8rem;
 
   #whatsapp-icon {
-    fill: $va-text-light;
+    fill: $second;
   }
   .fth {
     width: 3.2rem;

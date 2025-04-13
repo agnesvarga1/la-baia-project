@@ -15,7 +15,7 @@ import NavbarLG from "./NavbarLG.vue";
 @import "/src/assets/styles/variables";
 .bg-head-container {
   height: 95vh;
-  background: url("/imgs/bg-img-1.jpg") no-repeat center;
+  background: url("/imgs/dinning_room.jpg") no-repeat right;
   background-size: cover;
 }
 </style>

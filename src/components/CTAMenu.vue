@@ -18,19 +18,24 @@ const { t } = useI18n();
 <style scoped lang="scss">
 @import "/src/assets/styles/variables";
 section {
-  background-color: $va-prime;
+  background-color: $second;
   padding: 2.5rem;
   router-link {
     text-decoration: none;
   }
   button {
     border: 1px solid;
-    border-color: $va-second;
+    border-color: $prime;
     border-radius: 10px;
     text-align: center;
     background-color: transparent;
     font-size: 1.8rem;
-    color: $va-second;
+    color: $prime;
+    &:hover {
+      background-color: $prime;
+      color: $second;
+      border-color: $second;
+    }
   }
 }
 </style>

@@ -20,15 +20,17 @@ const { t } = useI18n();
 
 h2 {
   font-size: 2.5rem;
-  color: $va-prime;
+  color: $second;
 }
 h1 {
   font-family: "Cormorant Garamond", serif;
   font-size: 3rem;
+  color: $dark-text;
 }
 p {
   font-size: 1.2rem;
   line-height: 1.5rem;
+  color: $dark-text;
 }
 img {
   width: 100%;

@@ -82,11 +82,11 @@ const closeNavbar = () => {
 @import "/src/assets/styles/variables";
 
 nav {
-  color: $va-text-light;
+  color: $second;
   z-index: 8;
   &.scrolled-navbar {
     // Dark transparent background when scrolled
-    background-color: #00000053;
+    background-color: $prime-transparent;
   }
   &.open {
     height: 100vh;
@@ -95,14 +95,14 @@ nav {
     width: 5rem;
   }
   ul {
-    background-color: #baaea3d5;
+    background-color: $prime-transparent;
     padding-top: 60px;
     width: 100%;
 
     li {
       font-size: 2rem;
       a {
-        color: $va-text-light;
+        color: $dark-text;
         font-family: "Urbanist", sans-serif;
       }
     }
@@ -126,7 +126,7 @@ nav {
       display: flex;
       align-items: center;
       gap: 5px;
-      color: $va-text-light;
+      // color: $va-text-light;
 
       .flag {
         width: 24px;

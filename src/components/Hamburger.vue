@@ -1,4 +1,7 @@
 <script setup>
+import { useNavbarStore } from "../stores/useNavbarStore";
+
+const navbarStore = useNavbarStore();
 const props = defineProps({
   isOpen: Boolean,
 });
@@ -7,8 +10,12 @@ const emit = defineEmits(["toggle"]);
 </script>
 
 <template>
-  <div class="hamburger-menu" @click="emit('toggle')">
-    <div class="hamburger hamburger3 me-5" :class="{ open: isOpen }">
+  <div
+    class="hamburger-menu"
+    @click="emit('toggle')"
+    :class="{ 'scrolled-navbar': !navbarStore.isScrolled }"
+  >
+    <div class="hamburger hamburger3" :class="{ open: isOpen }">
       <span class="bar bar1"></span>
       <span class="bar bar2"></span>
       <span class="bar bar3"></span>
@@ -20,21 +27,30 @@ const emit = defineEmits(["toggle"]);
 @import "/src/assets/styles/variables";
 
 .hamburger-menu {
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  position: relative;
 
+  &.scrolled-navbar {
+    // Dark transparent background when scrolled
+    background-color: $prime-transparent; // Slightly darker when scrolled
+  }
   .hamburger {
     margin: 0 auto;
-    margin-top: 20px;
+    //margin-top: 20px;
     width: 30px;
     height: 30px;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .bar {
       padding: 0;
       width: 30px;
       height: 4px;
-      background-color: $va-text-light;
+      background-color: $second;
       display: block;
       border-radius: 4px;
       transition: all 0.4s ease-in-out;
