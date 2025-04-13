@@ -11,6 +11,7 @@ const messages = {
     welcome: "Welcome to the Baia",
     actionBtn: "Book now",
     perMenu: "Read Our Menu",
+    desc: "La Baia is located in a quiet spot with a view of Lake Garda.Our menu features grilled meat and fish dishes, along with reinterpreted traditional Italian recipes with a modern twist.We use carefully selected, seasonal ingredients to highlight the authentic flavors of Italian cuisine. To complete the experience, we offer a wine list that includes both local and national labels, thoughtfully paired with our dishes.The atmosphere is simple and welcoming—perfect for those looking to enjoy good food in a relaxing setting, with the added bonus of a lovely lake view.",
   },
   it: {
     home: "Home",
@@ -22,6 +23,7 @@ const messages = {
     welcome: "Benvenuti alla Baia",
     actionBtn: "Prenota ora",
     perMenu: "Leggi Nostro Menu",
+    desc: "La Baia si trova in una posizione tranquilla con vista sul Lago di Garda.La nostra cucina propone piatti di carne e pesce alla brace, insieme a ricette italiane tradizionali rivisitate con un tocco moderno.Utilizziamo ingredienti selezionati e di stagione, cercando di valorizzare i sapori autentici della cucina italiana. A completare l’esperienza, una carta dei vini che include etichette locali e nazionali, pensata per accompagnare al meglio ogni piatto.L’ambiente è semplice e curato, ideale per chi cerca una buona cucina in un contesto rilassante, con la possibilità di godere di una bella vista sul lago.",
   },
 };
 // Create Vue I18n instance

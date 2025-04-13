@@ -7,13 +7,7 @@ const { t } = useI18n();
     <div class="text-about px-2 ps-md-2">
       <h2>{{ t("about") }}</h2>
       <p class="body-dark pt-2 pe-md-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        {{ t("desc") }}
       </p>
     </div>
     <figure class="mb-0">
