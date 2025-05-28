@@ -19,7 +19,7 @@ const closeNavbar = () => {
 };
 </script>
 
-<template>
+<template class="positionrelative">
   <nav
     :class="{ 'scrolled-navbar': navbarStore.isScrolled, open: isNavOpen }"
     class="d-flex justify-content-between align-items-start position-fixed start-0 end-0 px-3 pt-2"
@@ -30,11 +30,6 @@ const closeNavbar = () => {
       </figure>
     </router-link>
 
-    <Hamburger
-      class="d-lg-none postion-absolute top-0 end-0 z-3"
-      :isOpen="isNavOpen"
-      @toggle="toggleNavbar"
-    ></Hamburger>
     <transition name="slide">
       <ul
         v-if="isNavOpen"
@@ -49,9 +44,9 @@ const closeNavbar = () => {
         <li @click="closeNavbar">
           <router-link :to="{ name: 'menu' }"> {{ t("menu") }}</router-link>
         </li>
-        <li @click="closeNavbar">
+        <!-- <li @click="closeNavbar">
           <a :href="store.whatsappUrl" target="blank">{{ t("book") }}</a>
-        </li>
+        </li> -->
         <li @click="closeNavbar">
           <a href="#location">{{ t("location") }}</a>
         </li>
@@ -76,6 +71,11 @@ const closeNavbar = () => {
         </li>
       </ul>
     </transition>
+    <Hamburger
+      class="d-lg-none postion-absolute top-0 end-0 z-3"
+      :isOpen="isNavOpen"
+      @toggle="toggleNavbar"
+    ></Hamburger>
   </nav>
 </template>
 <style scoped lang="scss">

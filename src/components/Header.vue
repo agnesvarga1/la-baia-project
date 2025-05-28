@@ -26,8 +26,9 @@ import NavbarLG from "./NavbarLG.vue";
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/imgs/dinning_room.jpg") no-repeat right;
+  background: url("/imgs/sunset.jpg") no-repeat center;
   background-size: cover;
+  // background-position: 50% 80%;
   opacity: 0;
   animation: fadeInBg 2s ease-in-out forwards;
   z-index: -1; /* keep it behind the content */
@@ -36,6 +37,12 @@ import NavbarLG from "./NavbarLG.vue";
 @keyframes fadeInBg {
   to {
     opacity: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .bg-head-container::before {
+    background-position: 50% 70%;
   }
 }
 </style>

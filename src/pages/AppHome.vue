@@ -5,6 +5,7 @@ import AboutComp from "../components/AboutComp.vue";
 import WhatsappBtn from "../components/WhatsappBtn.vue";
 import CTAMenu from "../components/CTAMenu.vue";
 import LocationComp from "../components/LocationComp.vue";
+import ContactUs from "../components/ContactUs.vue";
 import { useI18n } from "vue-i18n";
 import { onMounted, ref } from "vue";
 const { t } = useI18n();
@@ -20,14 +21,9 @@ onMounted(() => {
 
 <template>
   <Header></Header>
+
   <div class="container-lg p-0 mx-md-0 mx-lg-auto">
-    <div
-      :class="['whatsapp-btn', { 'scrolled-position': navbarStore.isScrolled }]"
-    >
-      <WhatsappBtn
-        :class="{ 'scrolled-position': navbarStore.isScrolled }"
-      ></WhatsappBtn>
-    </div>
+    <WhatsappBtn class="whatsapp-btn"></WhatsappBtn>
     <transition name="slide">
       <h1 v-if="showH1" class="text-center py-2">
         {{ t("welcome") }}
@@ -36,33 +32,40 @@ onMounted(() => {
     <AboutComp></AboutComp>
     <CTAMenu></CTAMenu>
     <LocationComp></LocationComp>
+    <ContactUs></ContactUs>
   </div>
 </template>
 <style scoped lang="scss">
 @import "/src/assets/styles/variables";
+.wrapper {
+  position: relative;
+}
 h1 {
   font-size: 2rem;
 }
-.container,
+
 .container-lg {
   position: relative;
   .whatsapp-btn {
     position: fixed;
-    bottom: 4.5rem;
+    bottom: 1rem;
     right: 1rem;
+    z-index: 10;
     &.scrolled-position {
       bottom: 1rem;
     }
-    @media (min-width: 576px) {
-      right: calc((100vw - 540px) / 2);
-    }
+    // @media (min-width: 576px) {
+    //   right: calc((100vw - 540px) / 2);
+    // }
 
-    @media (min-width: 768px) {
-      right: calc((100vw - 720px) / 2);
-    }
+    // @media (min-width: 768px) {
+    //   right: calc((100vw - 720px) / 2);
+    // }
 
     @media (min-width: 992px) {
       right: calc((100vw - 960px) / 2);
+      bottom: 1rem;
+      right: 1rem;
     }
 
     @media (min-width: 1200px) {

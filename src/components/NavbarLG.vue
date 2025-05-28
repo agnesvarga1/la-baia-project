@@ -17,7 +17,7 @@ const navbarStore = useNavbarStore();
           <img class="logo rounded" src="/imgs/logo.jpg" alt="logo" />
         </figure>
       </router-link>
-      <ul class="d-flex align-items-center gap-4 mb-0">
+      <ul class="d-flex align-items-center gap-3 mb-0">
         <li>
           <router-link :to="{ name: 'home' }">{{ t("home") }}</router-link>
         </li>
@@ -27,9 +27,9 @@ const navbarStore = useNavbarStore();
         <li>
           <router-link :to="{ name: 'menu' }"> {{ t("menu") }}</router-link>
         </li>
-        <li>
+        <!-- <li>
           <a :href="store.whatsappUrl" target="blank">{{ t("book") }}</a>
-        </li>
+        </li> -->
         <li>
           <a href="#location">{{ t("location") }}</a>
         </li>
@@ -93,7 +93,7 @@ ul {
     a {
       color: $dark-text;
       font-family: "Urbanist", sans-serif;
-
+      font-weight: bold;
       display: inline-block;
       padding: 5px 10px;
       position: relative;
