@@ -22,19 +22,23 @@ const navbarStore = useNavbarStore();
           <router-link :to="{ name: 'home' }">{{ t("home") }}</router-link>
         </li>
         <li>
-          <a href="#about">{{ t("about") }}</a>
+          <router-link :to="{ name: 'home', hash: '#about' }">{{
+            t("about")
+          }}</router-link>
+        </li>
+
+        <li>
+          <router-link :to="{ name: 'home', hash: '#location' }">{{
+            t("location")
+          }}</router-link>
         </li>
         <li>
           <router-link :to="{ name: 'menu' }"> {{ t("menu") }}</router-link>
         </li>
-        <!-- <li>
-          <a :href="store.whatsappUrl" target="blank">{{ t("book") }}</a>
-        </li> -->
         <li>
-          <a href="#location">{{ t("location") }}</a>
-        </li>
-        <li>
-          <a href="#contact">{{ t("contact") }}</a>
+          <router-link :to="{ name: 'home', hash: '#contactus' }">{{
+            t("contact")
+          }}</router-link>
         </li>
 
         <!-- Language Switcher -->

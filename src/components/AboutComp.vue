@@ -3,16 +3,18 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 </script>
 <template>
-  <section id="about" class="pt-3 d-md-flex">
-    <div class="text-about px-2 ps-md-2">
-      <h2>{{ t("about") }}</h2>
-      <p class="body-dark pt-2 pe-md-3">
-        {{ t("desc") }}
-      </p>
+  <section id="about" class="d-md-flex w-100 p-0 m-0">
+    <div class="row m-0">
+      <div class="text-about col-12 col-lg-6 px-3 px-lg-0">
+        <h2>{{ t("about") }}</h2>
+        <p class="body-dark pt-2 pe-md-3">
+          {{ t("desc") }}
+        </p>
+      </div>
+      <figure class="mb-0 col-12 col-lg-6 m-0 p-0">
+        <img src="/imgs/about.jpg" alt="about imgage" />
+      </figure>
     </div>
-    <figure class="mb-0">
-      <img src="/imgs/about.jpg" alt="about imgage" />
-    </figure>
   </section>
 </template>
 <style scoped lang="scss">
@@ -32,31 +34,19 @@ p {
   line-height: 1.8rem;
   color: $dark-text;
 }
+figure {
+  height: auto;
+  display: flex;
 
-img {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  // .text-about {
-  //   //width: 50%;
-  //   //  border: 2px solid red;
-  // }
-  figure {
-    height: 400px; /* or set a specific height like 300px */
-    display: flex;
-    // border: 2px solid blue;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (min-width: 992px) {
     img {
-      height: 100%;
-      width: auto;
       object-fit: cover;
     }
   }
 }
-
-// @media (min-width: 992px) {
-//   .text-about {
-//     width: calc(100% / 1.1);
-//   }
-// }
 </style>

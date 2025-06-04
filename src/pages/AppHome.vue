@@ -85,6 +85,9 @@ h1 {
   color: $second;
 }
 @media (min-width: 992px) {
+  .container-lg {
+    width: 100% !important;
+  }
   h1 {
     font-size: 3.5rem;
   }
