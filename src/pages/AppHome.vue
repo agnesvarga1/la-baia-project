@@ -8,9 +8,24 @@ import LocationComp from "../components/LocationComp.vue";
 import ContactUs from "../components/ContactUs.vue";
 import Footer from "../components/Footer.vue";
 import { useI18n } from "vue-i18n";
+import { useHead } from "@vueuse/head";
 import { onMounted, ref } from "vue";
 const { t } = useI18n();
 const navbarStore = useNavbarStore();
+
+useHead({
+  title: t("meta.title"),
+  meta: [
+    {
+      name: "description",
+      content: t("meta.description"),
+    },
+    {
+      name: "keywords",
+      content: t("meta.keywords"),
+    },
+  ],
+});
 
 const showH1 = ref(false);
 onMounted(() => {

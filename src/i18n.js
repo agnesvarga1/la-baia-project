@@ -20,19 +20,15 @@ const messages = {
     fri: "Friday	12–2 pm, 7–10 pm",
     sat: "Saturday	12–2:30 pm, 7–10:30 pm",
     sun: "Sunday	12–2:30 pm, 7–10 pm",
+    meta: {
+      title: "La Baia Italian Restaurant & Pizzeria | Desenzano",
+      description:
+        "Discover La Baia Restaurant in Desenzano del Garda: authentic Italian food, fresh lake fish, and stunning lake views. Near Sirmione.",
+      keywords:
+        "Desenzano restaurant, Sirmione restaurant, Italian cuisine, La Baia, Lake Garda, lake view dining, local cuisine, traditional Italian food, lake fish, seafood, grilled meat, Mediterranean cuisine Lake Garda",
+    },
   },
-  /**?
- * 
-  
- 
-Tuesday	12–2 pm, 7–10 pm
-Wednesday	12–2 pm, 7–10 pm
-Thursday	Closed
-Friday	12–2 pm, 7–10 pm
-Saturday	12–2:30 pm, 7–10:30 pm
-Sunday	12–2:30 pm, 7–10 pm
-Monday	12–2 pm, 7–10 pm
- */
+
   it: {
     home: "Home",
     about: "Chi Siamo",
@@ -52,6 +48,13 @@ Monday	12–2 pm, 7–10 pm
     fri: "Venerdì 12:00–14:00, 19:00–22:00",
     sat: "Sabato 12:00–14:30, 19:00–22:30",
     sun: "Domenica 12:00–14:30, 19:00–22:00",
+    meta: {
+      title: "La Baia Ristorante Pizzeria | Desenzano",
+      description:
+        "Scopri La Baia Ristorante a Desenzano del Garda: cucina italiana autentica, pesce fresco e una vista mozzafiato sul lago. Vicino a Sirmione.",
+      keywords:
+        "ristorante Desenzano, ristorante Sirmione, cucina italiana, La Baia, Lago di Garda, vista lago, cucina locale, cucina tradizionale, pesce di lago, pesce di mare, carne alla brace, cucina mediterranea sul Garda",
+    },
   },
 };
 // Create Vue I18n instance
