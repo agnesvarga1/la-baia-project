@@ -21,7 +21,7 @@ const messages = {
     sat: "Saturday	12–2:30 pm, 7–10:30 pm",
     sun: "Sunday	12–2:30 pm, 7–10 pm",
     meta: {
-      title: "La Baia Italian Restaurant & Pizzeria | Desenzano",
+      title: "La Baia Italian Restaurant | Desenzano",
       description:
         "Discover La Baia Restaurant in Desenzano del Garda: authentic Italian food, fresh lake fish, and stunning lake views. Near Sirmione.",
       keywords:
@@ -49,7 +49,7 @@ const messages = {
     sat: "Sabato 12:00–14:30, 19:00–22:30",
     sun: "Domenica 12:00–14:30, 19:00–22:00",
     meta: {
-      title: "La Baia Ristorante Pizzeria | Desenzano",
+      title: "La Baia Ristorante | Desenzano",
       description:
         "Scopri La Baia Ristorante a Desenzano del Garda: cucina italiana autentica, pesce fresco e una vista mozzafiato sul lago. Vicino a Sirmione.",
       keywords:
