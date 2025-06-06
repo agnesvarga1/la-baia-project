@@ -6,6 +6,7 @@ import WhatsappBtn from "../components/WhatsappBtn.vue";
 import CTAMenu from "../components/CTAMenu.vue";
 import LocationComp from "../components/LocationComp.vue";
 import ContactUs from "../components/ContactUs.vue";
+import Footer from "../components/Footer.vue";
 import { useI18n } from "vue-i18n";
 import { onMounted, ref } from "vue";
 const { t } = useI18n();
@@ -33,6 +34,7 @@ onMounted(() => {
     <CTAMenu></CTAMenu>
     <LocationComp></LocationComp>
     <ContactUs></ContactUs>
+    <Footer></Footer>
   </div>
 </template>
 <style scoped lang="scss">
