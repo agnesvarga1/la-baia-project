@@ -12,7 +12,7 @@ import { useHead } from "@vueuse/head";
 import { onMounted, ref } from "vue";
 const { t } = useI18n();
 const navbarStore = useNavbarStore();
-
+console.log(t("meta.description"));
 useHead({
   title: t("meta.title"),
   meta: [
@@ -43,8 +43,8 @@ onMounted(() => {
     <transition name="slide">
       <h1 v-if="showH1" class="text-center py-2">
         {{ t("welcome") }}
-      </h1></transition
-    >
+      </h1>
+    </transition>
     <AboutComp></AboutComp>
     <CTAMenu></CTAMenu>
     <LocationComp></LocationComp>
@@ -83,6 +83,12 @@ h1 {
       right: calc((100vw - 960px) / 2);
       bottom: 1rem;
       right: 1rem;
+      .container-lg {
+        width: 100% !important;
+      }
+      h1 {
+        font-size: 3.5rem;
+      }
     }
 
     @media (min-width: 1200px) {
@@ -100,14 +106,6 @@ h1 {
 h1 {
   font-family: "Cormorant Garamond", serif;
   color: $second;
-}
-@media (min-width: 992px) {
-  .container-lg {
-    width: 100% !important;
-  }
-  h1 {
-    font-size: 3.5rem;
-  }
 }
 
 .slide-enter-active {

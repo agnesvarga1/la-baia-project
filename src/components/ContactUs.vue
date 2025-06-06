@@ -2,6 +2,7 @@
 import { useI18n } from "vue-i18n";
 import { store } from "../store";
 const { t } = useI18n();
+console.log(t("book"));
 </script>
 
 <template>
@@ -9,7 +10,11 @@ const { t } = useI18n();
     <div class="row flex-column flex-md-row justify-content-start p-0 m-0">
       <div class="col-12 col-md-6 p-0">
         <figure class="m-0">
-          <img src="/imgs/context.jpg" alt="logo text" class="img-fluid" />
+          <img
+            src="/imgs/context.jpg"
+            alt="restaurant features"
+            class="img-fluid"
+          />
         </figure>
       </div>
       <div
@@ -44,6 +49,7 @@ const { t } = useI18n();
           <h5>
             <a
               href="https://www.google.com/maps/place/La+Baia+Ristorante/@45.4605093,10.5809366,536m/data=!3m2!1e3!4b1!4m6!3m5!1s0x478195cbbb88e15d:0xa0f967bd33c60589!8m2!3d45.4605093!4d10.5809366!16s%2Fg%2F11vtbpylpb?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
+              target="blank"
               >Viale F. Agello, 41, 25015 Desenzano del Garda BS</a
             >
           </h5>
